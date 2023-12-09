@@ -3,10 +3,14 @@
     <title>KCalc|calculate from your mind|http://127.0.0.1:5500/SCA.html</title>
 </head>
 <body style = "background-color: black;">
-	<style>
+	<style type = "text/css">
 		p{
 			color: rgb(35, 248, 35);
 			font-family: 'consolas';
+		}
+		label{
+				width: 100px;
+				display:inline-block;
 		}
 	</style>
 	<label style="color: rgb(35, 248, 35); font-family: consolas;">Select mode:</label>
@@ -18,11 +22,11 @@
 	</select><br>
 
 	<label style="color: rgb(35, 248, 35); font-family: consolas;">Enter a number(1): </label>
-	<input type = "text" style="font-family: consolas;" id = "Text1" required>
+	<input type = "text" style="font-family: consolas;" id = "Text1" oninput="letter_alerting()">
 	<br>
 
 	<label style="color: rgb(35, 248, 35); font-family: consolas;">Enter a number(2): </label>
-	<input type = "text" style="font-family: consolas;" id = "Text2" required>
+	<input type = "text" style="font-family: consolas;" id = "Text2" oninput="letter_alerting()">
 	<br>
 
 	<button type = "button" style="font-family: consolas;" id = "butt">Submit</button>
@@ -34,7 +38,7 @@
         let num1 = Number(document.getElementById("Text1").value);
         let num2 = Number(document.getElementById("Text2").value);
         let mode = document.getElementById("Mode").value;	
-		if(!(isNaN(num1)|isNaN(num2)))	{
+		if(!(isNaN(num1)|isNaN(num2))){
         if(mode == "+")
         {
             document.getElementById("paragraph").innerHTML = num1+" + "+num2+" = "+(num1+num2);		
@@ -51,7 +55,15 @@
         {
             document.getElementById("paragraph").innerHTML = num1+" / "+num2+" = "+(num1/num2);	    	
         }
-	}
+	 }
      }
+	 function letter_alerting(){
+		let value1 = Number(document.getElementById("Text1").value);
+		let value2 = Number(document.getElementById("Text2").value);
+		if(isNaN(value1)|isNaN(value2))
+		{
+			alert("Please write a number");
+		}
+	 }
 	</script>
 </body>
