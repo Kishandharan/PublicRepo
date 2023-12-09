@@ -13,7 +13,7 @@
 				display:inline-block;
 		}
 	</style>
-	<label style="color: rgb(35, 248, 35); font-family: consolas;">Select mode:</label>
+	<label style="color: rgb(35, 248, 35); font-family: consolas;" id="optl"></label>
     <select id = "Mode" name="Function">
 		<option value="+" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Add</option>
 		<option value="-" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Subtract</option>
@@ -21,11 +21,11 @@
 		<option value="/" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Divide</option>
 	</select><br>
 
-	<label style="color: rgb(35, 248, 35); font-family: consolas;">Enter a number(1): </label>
+	<label style="color: rgb(35, 248, 35); font-family: consolas;" id="txt1l"></label>
 	<input type = "text" style="font-family: consolas;" id = "Text1" oninput="letter_alerting()">
 	<br>
 
-	<label style="color: rgb(35, 248, 35); font-family: consolas;">Enter a number(2): </label>
+	<label style="color: rgb(35, 248, 35); font-family: consolas;" id="txt2l"></label>
 	<input type = "text" style="font-family: consolas;" id = "Text2" oninput="letter_alerting()">
 	<br>
 
@@ -34,6 +34,9 @@
 	<p id = "paragraph"></p>
 
 	<script>
+		document.getElementById("optl").innerHTML = "Select operation: ";
+		document.getElementById("txt1l").innerHTML = "Enter a number(1)";
+		document.getElementById("txt2l").innerHTML = "Enter a number(2)";
 		document.getElementById("butt").onclick = function onclick(){
         let num1 = Number(document.getElementById("Text1").value);
         let num2 = Number(document.getElementById("Text2").value);
