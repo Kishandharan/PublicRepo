@@ -3,6 +3,8 @@
     <title>KCalc|calculate from your mind|http://127.0.0.1:5500/SCA.html</title>
 </head>
 <body style = "background-color: black;">
+	<h1 style="text-align: center; font-family: consolas; color: rgb(0, 200, 0);font-size: medium;">Welcome to KCalc</h1>
+	<hr>
 	<style type = "text/css">
 		p{
 			color: rgb(35, 248, 35);
@@ -12,27 +14,33 @@
 				width: 100px;
 				display:inline-block;
 		}
+		
+		.bc{
+			zoom: 100%;
+		}
 	</style>
-	<label style="color: rgb(35, 248, 35); font-family: consolas;" id="optl"></label>
+	<div class="bc">
+	<label style="color: rgb(0, 200, 0); font-family: consolas;" id="optl"></label>
     <select id = "Mode" name="Function">
-		<option value="+" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Add</option>
-		<option value="-" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Subtract</option>
-		<option value="*" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Multiply</option>
-		<option value="/" style="background-color: black; color: rgb(35, 248, 35); font-family: consolas;">Divide</option>
+		<option value="+" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas;">Add</option>
+		<option value="-" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas;">Subtract</option>
+		<option value="*" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas;">Multiply</option>
+		<option value="/" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas;">Divide</option>
 	</select><br>
 
-	<label style="color: rgb(35, 248, 35); font-family: consolas;" id="txt1l"></label>
+	<label style="color: rgb(0, 200, 0); font-family: consolas;" id="txt1l"></label>
 	<input type = "text" style="font-family: consolas;" id = "Text1" oninput="letter_alerting()">
 	<br>
 
-	<label style="color: rgb(35, 248, 35); font-family: consolas;" id="txt2l"></label>
+	<label style="color: rgb(0, 200, 0); font-family: consolas;" id="txt2l"></label>
 	<input type = "text" style="font-family: consolas;" id = "Text2" oninput="letter_alerting()">
 	<br>
 
 	<button type = "button" style="font-family: consolas;" id = "butt">Submit</button>
 	
 	<p id = "paragraph"></p>
-
+	
+	</div>
 	<script>
 		document.getElementById("optl").innerHTML = "operation: ";
 		document.getElementById("txt1l").innerHTML = "number(1): ";
@@ -65,7 +73,7 @@
 		let value2 = Number(document.getElementById("Text2").value);
 		if(isNaN(value1)|isNaN(value2))
 		{
-			alert("Please write a number");
+			window.alert("Please write a number");
 		}
 	 }
 	</script>
