@@ -62,11 +62,8 @@
         }
         if(mode == "/")
         {
-	    if(num1 > num2){
+	    if(num1 > num2  | num1 == num2){
             document.getElementById("paragraph").innerHTML = num1+" / "+num2+" = "+(num1/num2);	
-	    }
-	    else{
-	    document.getElementById("paragraph").innerHTML = "Error";
 	    }
 	    if(num1 == 0  & num2 == 0){
 	    document.getElementById("paragraph").innerHTML = "Error";
