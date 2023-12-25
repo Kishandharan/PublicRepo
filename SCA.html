@@ -54,8 +54,7 @@
         let num1 = Number(document.getElementById("Text1").value);
         let num2 = Number(document.getElementById("Text2").value);
         let mode = document.getElementById("Mode").value;
-        if(document.getElementById("OutEn").value == "Enable"){
-		if(!(isNaN(num1)|isNaN(num2))){
+	if(!(isNaN(num1)|isNaN(num2))){
         if(mode == "+")
         {
             document.getElementById("paragraph").innerHTML = num1+" + "+num2+" = "+(num1+num2);		
@@ -74,7 +73,6 @@
         }
 	 }
 	}
-     }
 	 function letter_alerting(){
 		let value1 = Number(document.getElementById("Text1").value);
 		let value2 = Number(document.getElementById("Text2").value);
