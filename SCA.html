@@ -27,12 +27,6 @@
 		<option value="/" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas; font-size:xx-large;">Divide</option>
 	</select><br>
 
-	<label style="color: rgb(0, 200, 0); font-family: consolas;" id="optl97"></label>
-	<select id = "OutEn" name="Function2" style="font-size: xx-large;">
-		<option value="+" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas; font-size:xx-large;">Enable</option>
-		<option value="-" style="background-color: black; color: rgb(0, 200, 0); font-family: consolas; font-size:xx-large;">Disable</option>
-	</select><br>
-
 	<label style="color: rgb(0, 200, 0); font-family: consolas; text-align: center;" id="txt1l"></label><br>
 	<input type = "text" style="font-family: consolas; font-size:xx-large;" id = "Text1" oninput="letter_alerting()">
 	<br>
@@ -49,7 +43,6 @@
 		document.getElementById("optl").innerHTML = "operation: ";
 		document.getElementById("txt1l").innerHTML = "number(1): ";
 		document.getElementById("txt2l").innerHTML = "number(2): ";
-		document.getElementById("optl97").innerHTML = "Output enabling: ";
 		document.getElementById("butt").onclick = function onclick(){
         let num1 = Number(document.getElementById("Text1").value);
         let num2 = Number(document.getElementById("Text2").value);
