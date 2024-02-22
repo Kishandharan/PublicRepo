@@ -1,0 +1,71 @@
+Aerodynamic lift - 
+    In order to understand what is Aerodynamic lift,
+    we need to know the concept of bernoulli's principal.
+    When a fluid or a gas is travelling at high speed,
+    low pressure is created around the gas or fluid.
+    When a fluid or gas is travelling at low speed,
+    high pressure is created around the gas or fluid.
+    Now let's get into the concept of aerodynamic lift.
+    aerodynamic lift is created when a airfoil shaped material
+    is travelling at high speed in the air.  
+    When this material travels in the air,
+    air flows slowly in the bottom and fast in the top.
+    So, high pressure is created in the bottom and low pressure at the top.
+    Air always tries to go from high pressure to low pressure.
+    So when trying to go from high pressure bottom to low pressure top through the wings,
+    it pushes the wings upward. That is how aerodynamic lift is created.
+    And The lift depends on the tilt angle of the wings, if it is tilted forward,
+    the lift will be low and high if it is tilted backwards.
+    Note: wings are made in airfoil shape only.
+
+airplane Controls -
+        In this tutorial we are going to learn about Joystick Controls of an aircraft.        
+        When we are seated inside the aircraft this is located in the front of us.
+        So the aircraft goes towards our head-side as much as we pull the joystick towards us and the aircraft goes towards our 
+        feet-side as much as we push the joystick outward from us strightly and
+        the aircraft rotates anticlock-wise as much as we rotate the joystick anticlock-wise,
+        the aircraft rotates clock-wise as much as we rotate the joystick to the clock-wise.
+        This aircraft has another one control called, rudder pedals.
+        These are located near our foot.
+        the aircraft turns left as much as we push the left pedal.
+        the aircraft turns right as much as we push the right pedal.
+
+Elevator -
+        In order to understand what is elevators, we need to know the concept of aerodynamic lift.
+        We have another tutorial on that, so check it out before reading this.        
+        Elevator is a moving part that is attached to the tail of the aircraft.
+        There are two elevators in an aircraft and they move up and down only.
+        And both elevators move in the same direction.
+        This controls the up and down action of the aircraft.
+        When it moves up, the aerodynamic lift on the them becomes lower than the aerodynamic lift
+        on the wings.This causes the aircraft to go up.
+        When it moves down, the aerodynamic lift on the them becomes high than the aerodynamic lift
+        on the wings.This causes the aircraft to go down.
+        And that's how elevators control the direction of the plane.
+
+Rudder -
+        In order to understand what is rudder, we need to know the concept of aerodynamic lift.
+        We have another tutorial on that, so check it out before reading this.        
+        Rudder is a moving part that is attached to the tail of the aircraft.
+        There is only one rudder in an aircraft and they move left and right.
+        This controls the left and right action of the aircraft.
+        So when this turns left, the aerodynamic lift on left side increases and 
+        the aerodynamic lift on right side reduceses and this causes the plane to turn left.
+        So when this turns right, the aerodynamic lift on right side increases and 
+        the aerodynamic lift on left side reduceses and this causes the plane to turn right.
+        Which means, the aircraft turns left as much as the rudder turns left
+        and the aircraft turns right as much as the rudder turns right.        
+        And that's how rudder control the direction of the plane.
+
+Alierons -
+    In order to understand what is alierons, we need to know the concept of aerodynamic lift.
+    We have another tutorial on that, so check it out before reading this.
+    There are two alierons in an aircraft.
+    Both alierons are attached to the wings of the aircraft and they move in opposite direction.
+    This controls the roll rate of the aircraft by differentiating the aerodynamic lift in each wing.
+    If left wing alieron points upward and right wing alieron points downward, the aerodynamic lift on 
+    the left wing is reduced and lift on right wing is increased. This causes the aircraft to rotate
+    counter clock-wise(or anticlock-wise). 
+    If left wing alieron points downward and right wing alieron points upward, the aerodynamic lift on 
+    the left wing is increased and lift on right wing is reduced. This causes the aircraft to rotate
+    clock-wise. And this is how alierons control the roll rate of the aircraft.
