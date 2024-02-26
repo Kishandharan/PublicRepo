@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Market amount calculator.Enter the bill, Click the button, see the amount, All in just three steps!</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="item1"></td>
+            <td><input type="text" id="qty1"></td>
+            <td><input type="text" id="rate1"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="item2"></td>
+            <td><input type="text" id="qty2"></td>
+            <td><input type="text" id="rate2"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="item3"></td>
+            <td><input type="text" id="qty3"></td>
+            <td><input type="text" id="rate3"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="item4"></td>
+            <td><input type="text" id="qty4"></td>
+            <td><input type="text" id="rate4"></td>
+        </tr>
+    </table>
+    <button type="button" id="cal">Calculate amount</button>
+
+    <p id="item1_amount"></p>
+    <p id="item2_amount"></p>
+    <p id="item3_amount"></p>
+    <p id="item4_amount"></p>
+    <p id="totalAmount"></p>
+    <script>
+        //Function to be executed when the button is pressed👇.
+        document.getElementById("cal").onclick = function calculation(){
+
+        //Output declaration
+            let item1_amount = document.getElementById("item1_amount");
+            let item2_amount = document.getElementById("item2_amount");
+            let item3_amount = document.getElementById("item3_amount");
+            let item4_amount = document.getElementById("item4_amount");
+            let totalAmount = document.getElementById("totalAmount");
+
+            //Creating variables to read the items
+            let item1 = document.getElementById("item1").value;
+            let item2 = document.getElementById("item2").value;
+            let item3 = document.getElementById("item3").value;
+            let item4 = document.getElementById("item4").value;
+            
+            //Creating variables to read the quantities
+            let qty1 = Number(document.getElementById("qty1").value);
+            let qty2 = Number(document.getElementById("qty2").value);
+            let qty3 = Number(document.getElementById("qty3").value);
+            let qty4 = Number(document.getElementById("qty4").value);
+
+            //Creating variables to read the rates
+            let rate1 = Number(document.getElementById("rate1").value);
+            let rate2 = Number(document.getElementById("rate2").value);
+            let rate3 = Number(document.getElementById("rate3").value);
+            let rate4 = Number(document.getElementById("rate4").value);
+            
+            let p1 = `Amount of item '${item1}' is ${qty1*rate1}`
+            let p2 = `Amount of item '${item2}' is ${qty2*rate2}`
+            let p3 = `Amount of item '${item3}' is ${qty3*rate3}`
+            let p4 = `Amount of item '${item4}' is ${qty4*rate4}`
+            let p5 = `Total amount: ${((qty1*rate1)+(qty2*rate2)+(qty3*rate3)+(qty4*rate4))}`
+            if(!(isNaN(p1)|isNaN(p2)|isNaN(p3)|isNaN(p4)|isNaN(p5))){
+                item1_amount.innerHTML = p1;
+                item2_amount.innerHTML = p2;
+                item3_amount.innerHTML = p3;
+                item4_amount.innerHTML = p4;
+                totalAmount.innerHTML = p5;
+            }else{
+                item1_amount.innerHTML = "Error! Please don't enter any character other than number or don't leave any input empty";
+            }
+        }
+    </script>
+</body>
+</html>
