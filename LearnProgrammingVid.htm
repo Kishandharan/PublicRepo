@@ -19,9 +19,17 @@
         font-family: Consolas;
         color: darkpurple; 
         transition: 1s;
+        position: relative;
     }
     a:hover{
         color: red;
+        animation: shake;
+    }
+    @keyframes shake{
+        0%{rotate: 0deg;}
+		25%{rotate: 5deg;}
+		50%{rotate: -5deg;}
+		75%{rotate: 0deg;}
     }
 </style>
 <body style = "background-color: black;">
