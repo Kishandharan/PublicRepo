@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<title>TODO list</title>
-		<link rel = "icon" type = "image/png" href = "https://kishandharan.github.io/PublicRepo/tasks.png">
 	</head>
 	<style>
 		.container{
@@ -14,9 +13,8 @@
 		}
 
 		.ics{
-			width: 50rem;
-			height: 23rem;
-			overflow: scroll;
+			width: auto;
+			height: auto;
 		}
 	</style>
 	<body>
@@ -31,17 +29,15 @@
 		<script type="text/javascript">
 			let button = document.getElementById("CreateTask");
             let div = document.getElementById("container");
-            let TaskLimit = 10;
-            let id = 0;
-            let TaskCount = 0;
+            let innerDiv = document.getElementById("innerDiv");
 			function addTask(){
-				TaskCount++;
-				id++;
-				div.innerHTML += `<div id="d"><br> <input type='text' placeholder='Enter task'> <button onclick = 'rem()'>remove task</button> <input type='checkbox'></div>`;
+			
+					innerDiv.innerHTML += `<div id="di"><br> <input type='text' placeholder='Enter task'> <button onclick = 'rem()'>remove task</button> <input type='checkbox'></div>`;
 			}
 
 			function rem(){
-				div.removeChild(div.children[0]);
+				let element = document.getElementById("innerDiv");
+				element.removeChild(element.children[0]);
 			}
 		</script>
 	</body>
