@@ -31,23 +31,17 @@
 		<script type="text/javascript">
 			let button = document.getElementById("CreateTask");
             let div = document.getElementById("container");
-            let innerDiv = document.getElementById("innerDiv");
             let TaskLimit = 10;
             let id = 0;
             let TaskCount = 0;
 			function addTask(){
 				TaskCount++;
 				id++;
-				if(TaskCount <= TaskLimit){
-					innerDiv.innerHTML += `<div id="di"><br id='${id}'+'br'> <input type='text' placeholder='Enter task' id='${id}'+'inp'> <button id='${id}'+'butt' onclick = 'rem()'>remove task</button> <input type='checkbox' id='${id}'+'check'></div>`;
-				}else{
-					alert("Can create only 10 tasks.");
-				}
+				div.innerHTML += `<div><br> <input type='text' placeholder='Enter task'> <button onclick = 'rem()'>remove task</button> <input type='checkbox'></div>`;
 			}
 
 			function rem(){
-				let element = document.getElementById("innerDiv");
-				element.removeChild(element.children[0]);
+				div.removeChild(div.children[0]);
 			}
 		</script>
 	</body>
