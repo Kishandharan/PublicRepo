@@ -1,16 +1,38 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TODO list</title>
+		<title>Todo list website</title>
 		<link rel = "icon" type = "image/png" href = "https://kishandharan.github.io/PublicRepo/tasks.png">
 	</head>
 	<style>
-		.container{
+		.TodoContainer{
 			width: 50rem;
 			height: 25rem;
+			border: 2px solid black;
 			overflow: scroll;
-			border-bottom: 10px solid darkcyan;
-			border-top: 10px solid darkcyan;
+			border-radius: 8px;
+			padding-top: 0.0001px;
+			padding-left: 6px;
+			background-color: rgb(10, 230, 250);
+		}
+
+		#indicator{
+			font-family: Arial;
+			font-weight: bold;
+		}
+
+		#AddTaskButton{
+			font-family: Arial;
+			font-weight: bold;
+			background-color: rgb(10, 230, 250);
+			border-radius: 6px;
+		}
+
+		#Task{
+			font-family: Arial;
+			font-weight: bold;
+			border-radius: 6px;
 		}
 
 		.ics{
@@ -19,27 +41,27 @@
 		}
 	</style>
 	<body>
-		<div class="container" id="container">
-			<p>Tasks that you have created: </p>
+		<div class="TodoContainer" id="tc">
+			<p id="indicator">Tasks that you currently have:</p>
 			<div id="innerDiv" class="ics">
 				
 			</div>
 		</div>
-		<button id="CreateTask" onclick="addTask()">Add new task</button>
+		<input id="Task" required>
+		<button id="AddTaskButton">Add task</button>
 
-		<script type="text/javascript">
-			let button = document.getElementById("CreateTask");
-            let div = document.getElementById("container");
-            let innerDiv = document.getElementById("innerDiv");
-			function addTask(){
-			
-					innerDiv.innerHTML += `<div id="di"><br> <input type='text' placeholder='Enter task'> <button onclick = 'rem()'>remove task</button> <input type='checkbox'></div>`;
+		<script>
+			let AddTaskButton = document.getElementById("AddTaskButton");
+			let tc = document.getElementById("tc");
+			AddTaskButton.onclick = function(){
+				let Task = document.getElementById("Task").value;
+				document.getElementById("innerDiv").innerHTML += `<div id="di" style="font-family: Arial;
+			    font-weight: bold;"><br> ${Task} <button onclick = 'rem()'>remove task</button> <input type='checkbox'></div>`;
 			}
 
 			function rem(){
-				let element = document.getElementById("innerDiv");
-				element.removeChild(element.children[0]);
+				document.getElementById("innerDiv").removeChild(document.getElementById("innerDiv").children[0]);
 			}
-		</script>
+		</script>		
 	</body>
 </html>
