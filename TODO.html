@@ -18,19 +18,19 @@
 		}
 
 		#indicator{
-			font-family: Arial;
+			font-family: Bahnschrift Light;
 			font-weight: bold;
 		}
 
 		#AddTaskButton{
-			font-family: Arial;
+			font-family: Bahnschrift Light;
 			font-weight: bold;
 			background-color: rgb(10, 230, 250);
 			border-radius: 6px;
 		}
 
 		#Task{
-			font-family: Arial;
+			font-family: Bahnschrift Light;
 			font-weight: bold;
 			border-radius: 6px;
 		}
@@ -38,6 +38,10 @@
 		.ics{
 			width: auto;
 			height: auto;
+		}
+
+		body{
+			align-items: center;
 		}
 	</style>
 	<body>
@@ -55,7 +59,7 @@
 			let tc = document.getElementById("tc");
 			AddTaskButton.onclick = function(){
 				let Task = document.getElementById("Task").value;
-				document.getElementById("innerDiv").innerHTML += `<div id="di" style="font-family: Arial;
+				document.getElementById("innerDiv").innerHTML += `<div id="di" style="font-family: Bahnschrift Light;
 			    font-weight: bold;"><br> ${Task} <button onclick = 'rem()'>remove task</button> <input type='checkbox'></div>`;
 			}
 
