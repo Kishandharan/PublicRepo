@@ -4,11 +4,43 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>get date from the web</title>
+	<style type="text/css">
+		input,button,p{
+			font-family: Bahnschrift Light;
+			font-weight: bold;
+			font-size: xx-large;
+		}
+		p{
+			color: white;
+		}
+		button{
+			width: 25rem;
+		}
+		#innerdiv{
+			text-align: center;
+			border: 3px solid red;
+			box-shadow: 10px 11px 10px;
+			width: 30rem;
+			height: 17rem;
+		}
+		#outerdiv{
+			padding-left: 45rem;
+			padding-top: 15rem;
+		}
+		body{
+			background-color: #022f7a;
+		}
+	</style>
 </head>
 <body>
-	<input type="text" id="hump">
-	<button id="set">get</button>
-	<p id="p"></p>
+	<div id="outerdiv">
+		<div id="innerdiv">
+		<p>Enter data that you want to fetch<br>from the browser</p>
+		<input type="text" id="hump" placeholder="Enter item name"><br>
+		<button id="set">get</button>
+		<p id="p"></p>		
+		</div>		
+	</div>
 	<script type="text/javascript">
 		//Set Item
 		document.getElementById("set").onclick = function(){
