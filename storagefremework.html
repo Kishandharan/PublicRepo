@@ -4,16 +4,50 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Store date on the web permenently(in the form of key:value pairs)</title>
+	<style>
+		input,button,p{
+			font-family: Bahnschrift Light;
+			font-weight: bold;
+			font-size: xx-large;
+		}
+		p{
+			color: white;
+		}
+		button{
+			width: 25rem;
+		}
+		#innerdiv{
+			text-align: center;
+			border: 3px solid red;
+			box-shadow: 10px 11px 10px;
+			width: 30rem;
+			height: auto;
+			padding-bottom: 30px;
+		}
+
+		#outerdiv{
+			padding-left: 45rem;
+			padding-top: 15rem;
+		}
+		body{
+			background-color: #022f7a;
+		}
+	</style>
 </head>
 <body>
-	<input type="text" id="key" placeholder="Enter key"><br>
-	<input type="text" id="value" placeholder="Enter value"><br>
-	<button id="set">Set</button>
+	<div id="outerdiv">
+		<div id="innerdiv">
+			<p>Enter data to add to web</p>
+			<input type="text" id="key" placeholder="Enter key"><br>
+			<input type="text" id="value" placeholder="Enter value"><br>
+			<button id="set">Set</button>
+		</div>
+	</div>
 	<script type="text/javascript">
 		//Set Item
 		document.getElementById("set").onclick = function(){
 		localStorage.setItem(document.getElementById("key").value, document.getElementById("value").value);
-			
+
 		}
 
 	</script>
