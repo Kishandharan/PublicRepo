@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>get date from the web</title>
+</head>
+<body>
+	<input type="text" id="hump">
+	<button id="set">get</button>
+	<p id="p"></p>
+	<script type="text/javascript">
+		//Set Item
+		document.getElementById("set").onclick = function(){
+		document.getElementById("p").innerHTML= localStorage.getItem(document.getElementById("hump").value)
+			
+		}
+
+	</script>
+</body>
+</html>
