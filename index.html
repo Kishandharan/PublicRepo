@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Block coloring</title>
+   <style>
+	  td{
+		border-radius: 5px;
+		background-color: #e3e3e3;
+		width: 2rem;
+		height: 2rem;
+	  }
+   </style>
+
+   </style>
 </head>
 <body>
-    <p>The factorial of {{param2}} is {{param1}}</p>
+	<label>Color:</label>
+	<input type="color" id="color"><br>
+	<button id="set">set</button>
+	<button id="clear">clear</button>
+    <table id="table"> 		
+    </table> 
+	<script>
+		let table = document.getElementById("table");
+		for(let i = 1; i<=20; i++){
+			table.innerHTML += `<tr id='row${i}'></tr>`; 
+			for(let j = 1; j<=50; j++){
+				document.getElementById(`row${i}`).innerHTML += "<td></td>";
+		}
+		}	
+					
+		document.getElementById("set").onclick = function(){
+			let tds = document.getElementsByTagName("td");
+			let color = document.getElementById("color").value;
+			for(let i = 0; i<tds.length; i++){
+			tds[i].onclick = function(){
+				tds[i].style.backgroundColor = color;
+			}
+			}
+		}
+
+		document.getElementById("clear").onclick = function(){
+			let tds = document.getElementsByTagName("td");
+			for(let i = 0; i<tds.length; i++){
+				tds[i].style.backgroundColor = "#e3e3e3";
+			}
+		}
+		
+	</script>   
 </body>
 </html>
