@@ -55,12 +55,13 @@
         <option value="Verdana">Verdana</option>
         <option value="Corbel">Corbel</option>
         <option value="Source Code Pro">Source Code Pro</option>
+        <option value="Roboto Mono">Roboto Mono</option>
     </select><br>
     <label id="label3">Theme : </label>
     <select id="Theme">
         <option disabled>Select a Theme</option>
-        <option value="Dark">Dark</option>
-        <option value="Light">Light</option>
+        <option value="black">Dark</option>
+        <option value="white">Light</option>
     </select><br>
     <button onclick="onc()">Try</button>
     </div>
@@ -73,11 +74,8 @@
             let Font = document.getElementById("Font").value;
             document.getElementById("sample").style.fontFamily = Font;  
             let Theme = document.getElementById("Theme").value;
-            if(Theme == "Dark"){
-                document.getElementById("sample").style.backgroundColor = "black";
-            }else if(Theme == "Light"){
-                document.getElementById("sample").style.backgroundColor = "white";
-            }                     
+            document.getElementById("sample").style.backgroundColor = Theme;
+                                 
         }
     </script>
 </body>
