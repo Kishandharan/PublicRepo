@@ -52,7 +52,7 @@
 		
 		document.getElementById("getallkeys").onclick = function(){
 			let keys = [];
-			output.innerHTML = "';
+			output.innerHTML = "";
 			for(let i = 0; i<localStorage.length; i++){
 				let key = localStorage.key(i);
 				keys.push(key);
