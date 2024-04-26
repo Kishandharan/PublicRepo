@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,19 +36,31 @@
 <body>
 	<div id="outerdiv">
 		<div id="innerdiv">
-		<p>Enter data that you want to fetch<br>from the browser</p>
-		<input type="text" id="hump" placeholder="Enter item name"><br>
-		<button id="set">get</button>
-		<p id="p"></p>		
+			<p>Enter data that you want to fetch<br>from the browser</p>
+			<input type="text" id="itemname" placeholder="Enter item name"><br>
+			<button id="set">get</button><br>
+			<button id="getallkeys">get all keys</button>
+			<p id="p"></p>		
 		</div>		
 	</div>
-	<script type="text/javascript">
-		//Set Item
-		document.getElementById("set").onclick = function(){
-		document.getElementById("p").innerHTML= localStorage.getItem(document.getElementById("hump").value)
-			
-		}
 
+	<script type="text/javascript">
+		let output = document.getElementById("p");
+		document.getElementById("set").onclick = function(){
+			output.innerHTML = localStorage.getItem(document.getElementById("itemname").value)
+		}
+		
+		document.getElementById("getallkeys").onclick = function(){
+			let keys = [];
+			for(let i = 0; i<localStorage.length; i++){
+				let key = localStorage.key(i);
+				keys.push(key);
+			}
+
+			for(let i = 0; i<keys.length; i++){
+				output.innerHTML += keys[i]+"\n";
+			}		
+		}
 	</script>
 </body>
 </html>
