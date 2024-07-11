@@ -1,66 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SangamOne Connected Services - Block coloring</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
     <link rel="icon" href="fa.jpg">
-   <style>
-	  td{
-		border-radius: 5px;
-		background-color: #e3e3e3;
-		width: 2rem;
-		height: 2rem;
-	  }
-      button{
-        font-family: Verdana;
-        font-size: larger;
-      }
+    <style>
+    	.flex{
+    		display: flex;
+    	}
+		#cell{
+			background-color: #ffffff;
+			width: 2rem;
+			height: 2rem;
+		}
 
-      label{
-        font-family: Verdana;
-        font-size: larger;
-        color: #74D7CB;
-      }
+		button{
+			font-family: "Roboto Mono";
+			font-size: larger;
+			font-weight: bold;
+		}
 
-      body{
-        background-color: #27403C;
-      }
-   </style>
+		table{
+			margin-top: 5px;
+			border-top: 5px solid red;
+			border-bottom: 5px solid red;
+		}
 
-   </style>
+		label{
+			font-family: "Roboto Mono";
+			font-size: larger;
+			font-weight: bold;
+			color: #74D7CB;
+		}
+
+		body{
+			background-color: #27403C;
+			margin: 3px;
+		}
+
+		input[type="color"]{
+			width: 51px;
+		}
+    </style>
 </head>
 <body>
 	<label>Color:</label>
 	<input type="color" id="color"><br>
-	<button id="set">set</button>
-	<button id="clear">clear</button>
-    <table id="table"> 		
-    </table> 
+	<div class="flex">
+		<button id="set">set</button>
+		<button id="clear">clear</button>		
+	</div>
+    <table id="table"></table> 
 	<script>
 		let table = document.getElementById("table");
 		for(let i = 1; i<=22; i++){
 			table.innerHTML += `<tr id='row${i}'></tr>`; 
 			for(let j = 1; j<=52; j++){
-				document.getElementById(`row${i}`).innerHTML += "<td></td>";
-		}
+				document.getElementById(`row${i}`).innerHTML += `<td id='cell'></td>`;
+			}
 		}	
 					
 		document.getElementById("set").onclick = function(){
 			let tds = document.getElementsByTagName("td");
 			let color = document.getElementById("color").value;
 			for(let i = 0; i<tds.length; i++){
-			tds[i].onclick = function(){
-				tds[i].style.backgroundColor = color;
-			}
+				tds[i].onclick = function(){
+					tds[i].style.backgroundColor = color;
+				}
 			}
 		}
 
 		document.getElementById("clear").onclick = function(){
 			let tds = document.getElementsByTagName("td");
 			for(let i = 0; i<tds.length; i++){
-				tds[i].style.backgroundColor = "#e3e3e3";
+				tds[i].style.backgroundColor = "#ffffff";
 			}
 		}
 		
