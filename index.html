@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +32,8 @@
     	}
 		td{
 			background-color: #ffffff;
-			width: 1rem;
-			height: 1rem;
+			width: 2rem;
+			height: 2rem;
 		}
 
 		button{
@@ -44,7 +45,6 @@
 			margin-top: 5px;
 			border-top: 5px solid red;
 			border-bottom: 5px solid red;
-			background-color: #c2bebe;
 		}
 
 		label{
@@ -95,9 +95,9 @@
     <table id="table"></table> 
 	<script>
 		let table = document.getElementById("table");
-		for(let i = 1; i<=51; i++){
+		for(let i = 1; i<=23; i++){
 			table.innerHTML += `<tr id='row${i}'></tr>`; 
-			for(let j = 1; j<=100; j++){
+			for(let j = 1; j<=50; j++){
 				document.getElementById(`row${i}`).innerHTML += `<td id='cell'></td>`;
 			}
 		}	
